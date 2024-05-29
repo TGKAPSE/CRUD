@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71);
+            animation: fireEffect 1s infinite;
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+
+        @keyframes fireEffect {
+            0% {
+                background-color: #e74c3c;
+            }
+            50% {
+                background-color: #ffbe76;
+            }
+            100% {
+                background-color: #e74c3c;
+            }
+        }
+
+        h2 {
+            color: #2ecc71;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform-style: preserve-3d;
+            animation: danceEffect 2s infinite; /* Add danceEffect animation */
+        }
+
+        @keyframes danceEffect {
+            0% {
+                transform: rotateX(0) rotateY(0) translateZ(0);
+            }
+            25% {
+                transform: rotateX(30deg) rotateY(30deg) translateZ(10px);
+            }
+            50% {
+                transform: rotateX(0) rotateY(0) translateZ(0);
+            }
+            75% {
+                transform: rotateX(-30deg) rotateY(-30deg) translateZ(10px);
+            }
+            100% {
+                transform: rotateX(0) rotateY(0) translateZ(0);
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .instagram-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .instagram-icon:hover {
+            transform: rotate(360deg);
+            box-shadow: 0 0 10px #8b0000; /* Dark Red Box Shadow */
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var confirmDelete = confirm("Please confirm your ID before deleting.");
+            if (!confirmDelete) {
+                // Redirect or perform any other action based on user's choice
+                window.location.href = "index.html"; // Redirect to index.html for example
+            }
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#">Tanmay CRUD Application</a>
+    </nav>
+
+    <h2>Delete Student</h2>
+    <form action="delete1" method="get">
+        ID : <input type="text" name="did"> <br>
+        <input type="submit" value="DELETE">
+    </form>
+
+    <div class="footer">
+        <p>&#169; Tanmay Kapse | Tanmay CRUD Application</p>
+        <a href='https://www.instagram.com/tanmay_kapse_patil/?igshid=ZDdkNTZiNTM%3D' target='_blank'>
+            <img class='instagram-icon' src='insta.jpg' alt='Instagram'>
+        </a>
+    </div>
+</body>
+</html>
